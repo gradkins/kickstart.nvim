@@ -693,7 +693,7 @@ require('lazy').setup({
           capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities),
         },
         -- gopls = {},
-        -- pyright = {},
+        -- pyright = {  },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -719,6 +719,8 @@ require('lazy').setup({
           },
         },
       }
+
+      require('lspconfig').pyright.setup {}
 
       -- Ensure the servers and tools above are installed
       --
